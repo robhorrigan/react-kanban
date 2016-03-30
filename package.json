@@ -1,0 +1,19 @@
+{
+  "name": "react-kanban",
+  "version": "0.0.1",
+  "description": "React Kanban App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laxrph10/react-kanban.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laxrph10/react-kanban/issues"
+  },
+  "homepage": "https://github.com/laxrph10/react-kanban#readme"
+}
