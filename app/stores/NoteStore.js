@@ -7,6 +7,7 @@ class NoteStore {
     this.bindActions(NoteActions);
 
     this.notes = [];
+
     this.exportPublicMethods({
       getNotesByIds: this.getNotesByIds.bind(this)
     });
@@ -37,7 +38,6 @@ class NoteStore {
   }
 
   delete(id) {
-
     this.setState({
       notes: this.notes.filter(note => note.id !== id)
     });

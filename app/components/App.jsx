@@ -1,27 +1,22 @@
-import AltContainer from 'alt-container';
+import AltContainer from 'alt-container'; // eslint-disable-line no-unused-vars
 import React from 'react';
-
-import Lanes from './Lanes.jsx';
+import Lanes from './Lanes.jsx'; // eslint-disable-line no-unused-vars
 import LaneActions from '../actions/LaneActions';
 import LaneStore from '../stores/LaneStore';
 
 export default class App extends React.Component {
-
   render() {
     return (
       <div>
-
         <button className="add-lane" onClick={this.addLane}>+</button>
-
         <AltContainer
-          store={[LaneStore]}
+          stores={[LaneStore]}
           inject={{
             lanes: () => LaneStore.getState().lanes || []
           }}
          >
-
           <Lanes />
-         </AltContainer>
+        </AltContainer>
       </div>
     );
   }

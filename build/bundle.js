@@ -74,7 +74,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _persist2.default)(_alt2.default, _storage2.default, 'app');
+	(0, _persist2.default)(_alt2.default, _storage2.default, 'app'); // eslint-disable-line no-unused-vars
+	// eslint-disable-line no-unused-vars
+
 
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
@@ -113,7 +115,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background: cornsilk;\n  font-family: sans-serif;\n}\n\n.add-note {\n  background-color: #fdfdfd;\n  border: 1px solid #ccc;\n}\n\n.notes {\n  margin: 0.5em;\n  padding-left: 0;\n  max-width: 10em;\n  list-style: none;\n}\n\n.note {\n  margin-bottom: 0.5em;\n  padding: 0.5em;\n  background-color: #fdfdfd;\n  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.3);\n}\n\n.note:hover {\n  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.7);\n  transition: 0.6s;\n}\n\n.note .task {\n  display: inline-block;\n}\n\n.note .delete-note {\n  float: right;\n  padding: 0;\n  background-color: #fdfdfd;\n  border: none;\n  cursor: pointer;\n  visibility: hidden;\n}\n\n.note:hover .delete-note {\n  visibility: visible;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background: cornsilk;\n  font-family: sans-serif;\n}\n\n.lane {\n  display: inline-block;\n  margin: 1em;\n  background-color: #efefef;\n  border: 1px solid #ccc;\n  border-radius: 0.5em;\n  min-width: 10em;\n  vertical-align: top;\n}\n\n.lane-header {\n  overflow: auto;\n  padding: 1em;\n  color: #efefef;\n  background-color: #333;\n  border-top-left-radius: 0.5em;\n  border-top-right-radius: 0.5em;\n}\n\n.lane-name {\n  float: left;\n}\n\n.lane-add-note {\n  float: left;\n  margin-right: 0.5em;\n}\n\n.lane-delete {\n  float: right;\n  margin-left: 0.5em;\n  visibility: hidden;\n}\n\n.lane-header:hover .lane-delete {\n  visibility: visible;\n}\n\n.add-lane, .lane-add-note button {\n  cursor: pointer;\n  background-color: #fdfdfd;\n  border: 1px solid #ccc;\n}\n\n.lane-delete button {\n  padding: 0;\n  cursor: pointer;\n  color: white;\n  background-color: rgba(0, 0, 0, 0);\n  border: 0;\n}\n\n.notes {\n  margin: 0.5em;\n  padding-left: 0;\n  max-width: 10em;\n  list-style: none;\n}\n\n.note {\n  margin-bottom: 0.5em;\n  padding: 0.5em;\n  background-color: #fdfdfd;\n  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.3);\n}\n\n.note:hover {\n  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.7);\n  transition: 0.6s;\n}\n\n.note .task {\n  display: inline-block;\n}\n\n.note .delete {\n  float: right;\n  padding: 0;\n  background-color: #fdfdfd;\n  border: none;\n  cursor: pointer;\n  visibility: hidden;\n}\n\n.note:hover .delete {\n  visibility: visible;\n}\n", ""]);
 
 	// exports
 
@@ -20070,7 +20072,9 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // eslint-disable-line no-unused-vars
+	// eslint-disable-line no-unused-vars
+
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -20095,7 +20099,7 @@
 	        _react2.default.createElement(
 	          _altContainer2.default,
 	          {
-	            store: [_LaneStore2.default],
+	            stores: [_LaneStore2.default],
 	            inject: {
 	              lanes: function lanes() {
 	                return _LaneStore2.default.getState().lanes || [];
@@ -20920,6 +20924,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// eslint-disable-line no-unused-vars
+
 	exports.default = function (_ref) {
 	  var lanes = _ref.lanes;
 
@@ -20930,7 +20936,7 @@
 	      return _react2.default.createElement(_Lane2.default, { className: 'lane', key: lane.id, lane: lane });
 	    })
 	  );
-	};
+	}; // eslint-disable-line no-unused-vars
 
 /***/ },
 /* 177 */
@@ -20969,6 +20975,10 @@
 
 	var _LaneActions2 = _interopRequireDefault(_LaneActions);
 
+	var _Editable = __webpack_require__(179);
+
+	var _Editable2 = _interopRequireDefault(_Editable);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -20994,6 +21004,8 @@
 	    }
 
 	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Lane)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.addNote = function (e) {
+	      e.stopPropagation();
+
 	      var laneId = _this.props.lane.id;
 	      var note = _NoteActions2.default.create({ task: 'New Task' });
 
@@ -21008,6 +21020,24 @@
 
 	      _LaneActions2.default.detachFromLane({ laneId: laneId, noteId: noteId });
 	      _NoteActions2.default.delete(noteId);
+	    }, _this.editName = function (name) {
+	      var laneId = _this.props.lane.id;
+
+	      if (!name.trim()) {
+	        _LaneActions2.default.update({ id: laneId, editing: false });
+
+	        return;
+	      }
+
+	      _LaneActions2.default.update({ id: laneId, name: name, editing: false });
+	    }, _this.deleteLane = function () {
+	      var laneId = _this.props.lane.id;
+
+	      _LaneActions2.default.delete(laneId);
+	    }, _this.activateLaneEdit = function () {
+	      var laneId = _this.props.lane.id;
+
+	      _LaneActions2.default.update({ id: laneId, editing: true });
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
@@ -21024,7 +21054,7 @@
 	        props,
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'lane-header' },
+	          { className: 'lane-header', onClick: this.activateLaneEdit },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'lane-add-note' },
@@ -21033,12 +21063,17 @@
 	              { onClick: this.addNote },
 	              '+'
 	            )
+	          ),
+	          _react2.default.createElement(_Editable2.default, { className: 'lane-name', editing: lane.editing, value: lane.name, onEdit: this.editName }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'lane-delete' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: this.deleteLane },
+	              'x'
+	            )
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'lane-name' },
-	          lane.name
 	        ),
 	        _react2.default.createElement(
 	          _altContainer2.default,
@@ -21046,11 +21081,14 @@
 	            stores: [_NoteStore2.default],
 	            inject: {
 	              notes: function notes() {
-	                return _NoteStore2.default.getNotesByIds().notes || [];
+	                return _NoteStore2.default.getNotesByIds(lane.notes);
 	              }
 	            }
 	          },
-	          _react2.default.createElement(_Notes2.default, { onEdit: this.editNote, onDelete: this.deleteNote })
+	          _react2.default.createElement(_Notes2.default, {
+	            onValueClick: this.activateNoteEdit,
+	            onEdit: this.editNote,
+	            onDelete: this.deleteNote })
 	        )
 	      );
 	    }
@@ -21058,10 +21096,17 @@
 	    key: 'editNote',
 	    value: function editNote(id, task) {
 	      if (!task.trim()) {
+	        _NoteActions2.default.update({ id: id, editing: false });
+
 	        return;
 	      }
 
-	      _NoteActions2.default.update({ id: id, task: task });
+	      _NoteActions2.default.update({ id: id, task: task, editing: false });
+	    }
+	  }, {
+	    key: 'activateNoteEdit',
+	    value: function activateNoteEdit(id) {
+	      _NoteActions2.default.update({ id: id, editing: true });
 	    }
 	  }]);
 
@@ -21084,14 +21129,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Note = __webpack_require__(179);
+	var _Editable = __webpack_require__(179);
 
-	var _Note2 = _interopRequireDefault(_Note);
+	var _Editable2 = _interopRequireDefault(_Editable);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// eslint-disable-line no-unused-vars
+
 	exports.default = function (_ref) {
 	  var notes = _ref.notes;
+	  var onValueClick = _ref.onValueClick;
 	  var onEdit = _ref.onEdit;
 	  var onDelete = _ref.onDelete;
 
@@ -21102,14 +21150,16 @@
 	      return _react2.default.createElement(
 	        'li',
 	        { className: 'note', key: note.id },
-	        _react2.default.createElement(_Note2.default, {
-	          task: note.task,
+	        _react2.default.createElement(_Editable2.default, {
+	          editing: note.editing,
+	          value: note.task,
+	          onValueClick: onValueClick.bind(null, note.id),
 	          onEdit: onEdit.bind(null, note.id),
 	          onDelete: onDelete.bind(null, note.id) })
 	      );
 	    })
 	  );
-	};
+	}; // eslint-disable-line no-unused-vars
 
 /***/ },
 /* 179 */
@@ -21130,99 +21180,94 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Note = function (_React$Component) {
-	  _inherits(Note, _React$Component);
+	var Editable = function (_React$Component) {
+	  _inherits(Editable, _React$Component);
 
-	  function Note(props) {
-	    _classCallCheck(this, Note);
+	  function Editable() {
+	    var _Object$getPrototypeO;
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Note).call(this, props));
+	    var _temp, _this, _ret;
 
-	    _this.renderEdit = function () {
+	    _classCallCheck(this, Editable);
+
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Editable)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.renderEdit = function () {
 	      return _react2.default.createElement("input", { type: "text",
 	        ref: function ref(e) {
-	          return e ? e.selectionStart = _this.props.task.length : null;
+	          return e ? e.selectionStart = _this.props.value.length : null;
 	        },
-	        autofocus: true,
-	        defaultValue: _this.props.task,
-	        onBlur: _this.finishEdit,
+	        autoFocus: true,
+	        defaultValue: _this.props.value,
+	        onBlue: _this.finishEdit,
 	        onKeyPress: _this.checkEnter });
-	    };
-
-	    _this.renderNote = function () {
+	    }, _this.renderValue = function () {
 	      var onDelete = _this.props.onDelete;
 
 	      return _react2.default.createElement(
 	        "div",
-	        { onClick: _this.edit },
+	        { onClick: _this.props.onValueClick },
 	        _react2.default.createElement(
 	          "span",
-	          { className: "task" },
-	          _this.props.task
+	          { className: "value" },
+	          _this.props.value
 	        ),
 	        onDelete ? _this.renderDelete() : null
 	      );
-	    };
-
-	    _this.renderDelete = function () {
+	    }, _this.renderDelete = function () {
 	      return _react2.default.createElement(
 	        "button",
-	        { className: "delete-note", onClick: _this.props.onDelete },
+	        {
+	          className: "delete",
+	          onClick: _this.props.onDelete },
 	        "x"
 	      );
-	    };
-
-	    _this.edit = function () {
-	      _this.setState({
-	        editing: true
-	      });
-	    };
-
-	    _this.checkEnter = function (e) {
+	    }, _this.checkEnter = function (e) {
 	      if (e.key === 'Enter') {
 	        _this.finishEdit(e);
 	      }
-	    };
-
-	    _this.finishEdit = function (e) {
+	    }, _this.finishEdit = function (e) {
 	      var value = e.target.value;
 
 	      if (_this.props.onEdit) {
 	        _this.props.onEdit(value);
-
-	        _this.setState({
-	          editing: false
-	        });
 	      }
-	    };
-
-	    _this.state = {
-	      editing: false
-	    };
-	    return _this;
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
-	  _createClass(Note, [{
+	  _createClass(Editable, [{
 	    key: "render",
 	    value: function render() {
-	      if (this.state.editing) {
-	        return this.renderEdit();
-	      }
+	      var _props = this.props;
+	      var value = _props.value;
+	      var onEdit = _props.onEdit;
+	      var onValueClick = _props.onValueClick;
+	      var editing = _props.editing;
 
-	      return this.renderNote();
+	      var props = _objectWithoutProperties(_props, ["value", "onEdit", "onValueClick", "editing"]);
+
+	      return _react2.default.createElement(
+	        "div",
+	        props,
+	        editing ? this.renderEdit() : this.renderValue()
+	      );
 	    }
 	  }]);
 
-	  return Note;
+	  return Editable;
 	}(_react2.default.Component);
 
-	exports.default = Note;
+	exports.default = Editable;
 
 /***/ },
 /* 180 */
@@ -23012,6 +23057,7 @@
 	    this.bindActions(_NoteActions2.default);
 
 	    this.notes = [];
+
 	    this.exportPublicMethods({
 	      getNotesByIds: this.getNotesByIds.bind(this)
 	    });
@@ -23046,7 +23092,6 @@
 	  }, {
 	    key: 'delete',
 	    value: function _delete(id) {
-
 	      this.setState({
 	        notes: this.notes.filter(function (note) {
 	          return note.id !== id;
@@ -27146,7 +27191,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _alt2.default.generateActions('create', 'attachToLane', 'detachFromLane');
+	exports.default = _alt2.default.generateActions('create', 'update', 'delete', 'attachToLane', 'detachFromLane');
 
 /***/ },
 /* 221 */
@@ -27157,6 +27202,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -27198,13 +27245,35 @@
 	      });
 	    }
 	  }, {
+	    key: 'update',
+	    value: function update(updatedLane) {
+	      var lanes = this.lanes.map(function (lane) {
+	        if (lane.id === updatedLane.id) {
+	          return _extends({}, lane, updatedLane);
+	        }
+
+	        return lane;
+	      });
+
+	      this.setState({ lanes: lanes });
+	    }
+	  }, {
+	    key: 'delete',
+	    value: function _delete(id) {
+	      this.setState({
+	        lanes: this.lanes.filter(function (lane) {
+	          return lane.id !== id;
+	        })
+	      });
+	    }
+	  }, {
 	    key: 'attachToLane',
 	    value: function attachToLane(_ref) {
 	      var laneId = _ref.laneId;
 	      var noteId = _ref.noteId;
 
 	      var lanes = this.lanes.map(function (lane) {
-	        if (lane.id === landId) {
+	        if (lane.id === laneId) {
 	          if (lane.notes.indexOf(noteId) !== -1) {
 	            console.warn('Already attached note to lane', lanes);
 	          } else {

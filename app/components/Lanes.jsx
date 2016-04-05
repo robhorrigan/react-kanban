@@ -1,5 +1,5 @@
-import React from 'react';
-import Lane from './Lane.jsx';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import Lane from './Lane.jsx'; // eslint-disable-line no-unused-vars
 
 export default ({lanes}) => {
   return (
@@ -7,4 +7,4 @@ export default ({lanes}) => {
       <Lane className="lane" key={lane.id} lane={lane} />
     )}</div>
   );
-}
+};
