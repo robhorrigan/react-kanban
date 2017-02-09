@@ -30,12 +30,12 @@ class LaneStore {
     });
 
     this.setState({lanes});
-  };
+  }
   delete(id) {
     this.setState({
       lanes: this.lanes.filter(lane => lane.id !== id)
     });
-  };
+  }
   attachToLane({laneId, noteId}) {
     const lanes = this.lanes.map(lane => {
       if(lane.notes.includes(noteId)) {

@@ -5,20 +5,20 @@
   "main": "index.js",
   "scripts": {
     "stats": "webpack --profile --json > stats.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint . --ext .js --ext .jsx",
     "build": "webpack",
     "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laxrph10/react-kanban.git"
+    "url": "git+https://github.com/robhorrigan/react-kanban.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laxrph10/react-kanban/issues"
+    "url": "https://github.com/robhorrigan/react-kanban/issues"
   },
-  "homepage": "https://github.com/laxrph10/react-kanban#readme",
+  "homepage": "https://github.com/robhorrigan/react-kanban#readme",
   "devDependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
@@ -28,10 +28,13 @@
     "babel-preset-survivejs-kanban": "^0.3.3",
     "clean-webpack-plugin": "^0.1.8",
     "css-loader": "^0.23.1",
+    "eslint": "^2.7.0",
     "eslint-plugin-react": "^4.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.15.0",
     "html-webpack-template": "^4.0.0",
+    "jscs": "^2.11.0",
+    "jscs-loader": "^0.2.0",
     "npm-install-webpack-plugin": "^3.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
